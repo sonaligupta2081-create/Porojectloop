@@ -7,10 +7,10 @@
 // enforced by middleware.ts before this even renders).
 
 import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/auth-config";
-import { Sidebar } from "@/components/nav/Sidebar";
-import { Topbar } from "@/components/nav/Topbar";
-import { MobileBottomNav } from "@/components/nav/MobileNav";
+import { authOptions } from "../../lib/auth-config";
+import { Sidebar } from "../../components/nav/Sidebar";
+import { Topbar } from "../../components/nav/Topbar";
+import { MobileBottomNav } from "../../components/nav/MobileNav";
 
 const BRAND = "Customer Feedback Intelligence Platform";
 
