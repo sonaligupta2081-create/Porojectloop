@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: project-loop
+    env: node
+    region: oregon
+    plan: starter
+    
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    
+    envVars:
+      - key: NEXTAUTH_URL
+        value: https://project-loop.onrender.com
+      - key: NODE_ENV
+        value: production
+    
+    envVarsThatReference:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: project-loop-db
+          property: connectionString
+      - key: DIRECT_URL
+        fromDatabase:
+          name: project-loop-db
+          property: directConnectionString
+    
+    autoDeploy: true
+
+databases:
+  - name: project-loop-db
+    plan: starter
+    region: oregon
+    databaseName: projectloop
+    databaseUser: projectloop
