@@ -13,10 +13,10 @@
 // up to anything real.
 
 import { useEffect, useState } from "react";
-import StatCards from "@/components/Dashboard/StatCards";
-import SentimentChart from "@/components/Dashboard/SentimentChart";
-import TopThemesChart from "@/components/Dashboard/TopThemesChart";
-import VolumeChart from "@/components/Dashboard/VolumeChart";
+import StatCards from "@/components/dashboard/StatCards";
+import SentimentChart from "@/components/dashboard/SentimentChart";
+import TopThemesChart from "@/components/dashboard/TopThemesChart";
+import VolumeChart from "@/components/dashboard/VolumeChart";
 import type { DashboardMetrics } from "@/types";
 
 export default function DashboardView() {
