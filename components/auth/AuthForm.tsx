@@ -49,7 +49,7 @@ export function AuthForm({ mode: initialMode }: { mode: "login" | "signup" }) {
         setLoading(false);
         return;
       }
-      
+
       const hasNumberOrSpecial = /[0-9!@#$%^&*(),.?":{}|<>]/;
       if (!hasNumberOrSpecial.test(normalizedPassword)) {
         setError("Password must contain at least one number or special character.");
@@ -73,6 +73,7 @@ export function AuthForm({ mode: initialMode }: { mode: "login" | "signup" }) {
             name: name.trim(),
             email: normalizedEmail,
             password: normalizedPassword,
+            role,
           }),
         });
 
