@@ -13,6 +13,7 @@
 // exist anywhere in that codebase, so it could never have run. This is
 // a working implementation against the real Prisma schema, scoped to
 // the caller's workspace exactly like every other route in lib/scoped-db.ts.
+export const dynamic = "force-dynamic";
 
 import { NextResponse } from "next/server";
 import { db } from "@/lib/db";
